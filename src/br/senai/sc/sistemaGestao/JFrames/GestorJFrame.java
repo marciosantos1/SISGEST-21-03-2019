@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.senai.sc.sistemaGestao.painels;
+package br.senai.sc.sistemaGestao.JFrames;
+
+import br.senai.sc.JPainels.CadastrarUsuarioJPainel;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -11,11 +15,14 @@ package br.senai.sc.sistemaGestao.painels;
  */
 public class GestorJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form GestorJFrame
-     */
+  
+   
+    
     public GestorJFrame() {
         initComponents();
+        
+        
+        
     }
 
     /**
@@ -27,33 +34,52 @@ public class GestorJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jLabel2 = new javax.swing.JLabel();
+        buttonCadastro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Equipe");
-        jMenuBar1.add(jMenu1);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sc/imagens/plus.PNG"))); // NOI18N
 
-        jMenu2.setText("Colaboradores");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
+        buttonCadastro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        buttonCadastro.setText("Cadastrar");
+        buttonCadastro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonCadastroMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(buttonCadastro))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1044, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonCadastro)
+                .addContainerGap(454, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonCadastroMouseClicked
+      
+        
+    }//GEN-LAST:event_buttonCadastroMouseClicked
 
     /**
      * @param args the command line arguments
@@ -91,8 +117,7 @@ public class GestorJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JButton buttonCadastro;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.senai.sc.sistemaGestao.painels;
+package br.senai.sc.sistemaGestao.JFrames;
 
 import br.senai.sc.sisloja.dao.ColaboradorDao;
 import br.senai.sc.sisGestao.conexao.ConnectionFactory;
@@ -148,7 +148,8 @@ public class LoginJFrame extends javax.swing.JFrame {
          if (val.checkLogin(usuario, senhaString, cargo)) {
             this.dispose();
             if (cargo.equals("Gestor") || cargo.equals("gestor")) {
-                
+                 GestorJFrame gestor = new GestorJFrame();
+                 gestor.setVisible(true);
             } else {
                 
             }

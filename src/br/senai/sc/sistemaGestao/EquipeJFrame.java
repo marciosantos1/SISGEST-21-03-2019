@@ -17,12 +17,8 @@ import java.util.logging.Logger;
  */
 public class EquipeJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form EquipeJFrame
-     */
     
-    EquipeDao equipe = new EquipeDao();
-    
+
     public EquipeJFrame() {
         initComponents();
     }
@@ -44,6 +40,11 @@ public class EquipeJFrame extends javax.swing.JFrame {
         jSalvar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel1.setText("NOME DA EQUIPE");
 
@@ -123,20 +124,26 @@ public class EquipeJFrame extends javax.swing.JFrame {
 
     private void jSalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSalvarMouseClicked
         CadastrarEquipe e = new CadastrarEquipe();
-        
+        EquipeDao equipe = new EquipeDao();
+
         String nome = jNomeEquipe.getText();
         String descricao = jDescricaoEquipe.getText();
-        
+
         e.setNome(nome);
         e.setDescricao(descricao);
-        
+
         try {
             equipe.inserir(e);
         } catch (SQLException ex) {
             Logger.getLogger(EquipeJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
+
     }//GEN-LAST:event_jSalvarMouseClicked
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

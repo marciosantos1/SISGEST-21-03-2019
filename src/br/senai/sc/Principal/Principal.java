@@ -5,7 +5,7 @@
  */
 package br.senai.sc.Principal;
 
-import br.senai.sc.sistemaGestao.painels.LoginJFrame;
+import br.senai.sc.sistemaGestao.JFrames.LoginJFrame;
 
 public class Principal {
 

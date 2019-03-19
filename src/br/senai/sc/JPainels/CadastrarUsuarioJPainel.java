@@ -1,33 +1,29 @@
-package br.senai.sc.sistemaGestao;
-
-import br.senai.sc.sisGestao.modelo.CadastrarColaborador;
-import br.senai.sc.sisloja.dao.ColaboradorDao;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package br.senai.sc.JPainels;
+
+import br.senai.sc.sisGestao.modelo.CadastrarColaborador;
+import br.senai.sc.sisloja.dao.ColaboradorDao;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author Aluno
+ * @author Kathu
  */
-public class GestaoJFrame extends javax.swing.JFrame {
-    
-     ColaboradorDao col = new ColaboradorDao();
+public class CadastrarUsuarioJPainel extends javax.swing.JPanel {
+   
+
     /**
-     * Creates new form GestaoJFrame
+     * Creates new form CadastrarUsuario
      */
-    public GestaoJFrame() {
+    public CadastrarUsuarioJPainel() {
         initComponents();
-       
     }
 
     /**
@@ -39,29 +35,68 @@ public class GestaoJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox2 = new javax.swing.JComboBox<String>();
-        bTeste = new javax.swing.JButton();
-        jNome = new javax.swing.JTextField();
         jEndereco = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jUsuario = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jSenha = new javax.swing.JTextField();
-        comboTipo = new javax.swing.JComboBox<String>();
+        jLabel7 = new javax.swing.JLabel();
+        comboTipo = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jSobrenome = new javax.swing.JTextField();
+        bTeste = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
+        jNome = new javax.swing.JTextField();
         cpCodEquipe = new javax.swing.JTextField();
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jEndereco.setText("endereco");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setText("Código da equipe");
+
+        jUsuario.setText("usuario");
+        jUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUsuarioActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setText("Cargo");
+
+        jSenha.setText("senha");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setText("Endereço");
+
+        comboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Selecione", "Colaborador", "Gestor"}));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel8.setText("Registro de Usuário");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Usuário");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Senha");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("Nome");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("Sobrenome");
+
+        jSobrenome.setText("sobrenome");
+        jSobrenome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSobrenomeActionPerformed(evt);
+            }
+        });
 
         bTeste.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bTeste.setText("Registrar");
@@ -83,52 +118,14 @@ public class GestaoJFrame extends javax.swing.JFrame {
             }
         });
 
-        jEndereco.setText("endereco");
-
-        jUsuario.setText("usuario");
-        jUsuario.addActionListener(new java.awt.event.ActionListener() {
+        cpCodEquipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jUsuarioActionPerformed(evt);
+                cpCodEquipeActionPerformed(evt);
             }
         });
 
-        jSenha.setText("senha");
-
-        comboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Selecione", "Colaborador", "Gestor"}));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Usuário");
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Senha");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Nome");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Sobrenome");
-
-        jSobrenome.setText("sobrenome");
-        jSobrenome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSobrenomeActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Código da equipe");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("Cargo");
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("Endereço");
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel8.setText("Registro de Usuário");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -202,7 +199,7 @@ public class GestaoJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cpCodEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -215,23 +212,22 @@ public class GestaoJFrame extends javax.swing.JFrame {
                     .addComponent(jSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addComponent(bTeste)
-                .addGap(289, 289, 289))
+                .addComponent(bTeste, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jUsuarioActionPerformed
 
-    private void jNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNomeActionPerformed
+    private void jSobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSobrenomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jNomeActionPerformed
+    }//GEN-LAST:event_jSobrenomeActionPerformed
 
     private void bTesteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bTesteMouseClicked
         CadastrarColaborador colaborador = new CadastrarColaborador();
+        ColaboradorDao col = new ColaboradorDao();
         
         String tipo = comboTipo.getSelectedItem().toString();
         String usuario = jUsuario.getText();
@@ -239,72 +235,42 @@ public class GestaoJFrame extends javax.swing.JFrame {
         String nome = jNome.getText();
         String endereco = jEndereco.getText();
         String equipe = cpCodEquipe.getText();
-       
-        int equipeInt = Integer.parseInt(equipe); 
-                
+
+        int equipeInt = Integer.parseInt(equipe);
+
         colaborador.setTipo(tipo);
         colaborador.setUsuario(usuario);
         colaborador.setSenha(senha);
         colaborador.setNome(nome);
         colaborador.setEndereco(endereco);
         colaborador.setEquipe(equipeInt);
- 
-         try {
-             col.inserir(colaborador);
-             JOptionPane.showMessageDialog(null,"Cadastrado");
-         } catch (SQLException ex) {
-             Logger.getLogger(GestaoJFrame.class.getName()).log(Level.SEVERE, null, ex);
-         }
+        try {
+            col.inserir(colaborador);
+            JOptionPane.showMessageDialog(null,"Cadastrado");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Erro no cadastro");
+            Logger.getLogger(CadastrarUsuarioJPainel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_bTesteMouseClicked
-
-    private void jSobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSobrenomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jSobrenomeActionPerformed
 
     private void bTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTesteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bTesteActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GestaoJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GestaoJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GestaoJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GestaoJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNomeActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GestaoJFrame().setVisible(true);
-            }
-        });
-    }
+    private void cpCodEquipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpCodEquipeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpCodEquipeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bTeste;
     private javax.swing.JComboBox<String> comboTipo;
     private javax.swing.JTextField cpCodEquipe;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JTextField jEndereco;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
