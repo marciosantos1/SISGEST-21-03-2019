@@ -5,10 +5,6 @@
  */
 package br.senai.sc.sistemaGestao.JFrames;
 
-import br.senai.sc.JPainels.CadastrarUsuarioJPainel;
-import java.awt.CardLayout;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Aluno

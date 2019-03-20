@@ -41,7 +41,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         buttonLogin = new javax.swing.JButton();
         comboCargo = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        buttonRegistrar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         cpSenha = new javax.swing.JPasswordField();
 
@@ -67,7 +67,12 @@ public class LoginJFrame extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Cargo");
 
-        jButton1.setText("Registrar");
+        buttonRegistrar.setText("Registrar");
+        buttonRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonRegistrarMouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Esqueci a senha");
 
@@ -100,7 +105,7 @@ public class LoginJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(cpSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(buttonRegistrar))
                 .addGap(0, 78, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -118,7 +123,7 @@ public class LoginJFrame extends javax.swing.JFrame {
                     .addComponent(comboCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonLogin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(buttonRegistrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
                 .addContainerGap(36, Short.MAX_VALUE))
@@ -161,6 +166,12 @@ public class LoginJFrame extends javax.swing.JFrame {
     private void cpSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cpSenhaActionPerformed
+
+    private void buttonRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRegistrarMouseClicked
+        RegistroJFrame registro = new RegistroJFrame();
+        registro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonRegistrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -205,10 +216,10 @@ public class LoginJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonLogin;
+    private javax.swing.JButton buttonRegistrar;
     private javax.swing.JComboBox comboCargo;
     private javax.swing.JPasswordField cpSenha;
     private javax.swing.JTextField cpUsuario;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

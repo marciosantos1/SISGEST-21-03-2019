@@ -1,7 +1,7 @@
 package br.senai.sc.sisGestao.modelo;
 
 import br.senai.sc.sisGestao.conexao.ConnectionFactory;
-import br.senai.sc.sisGestao.modelo.CadastrarColaborador;
+import br.senai.sc.sisGestao.modelo.CadastrarUsuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
