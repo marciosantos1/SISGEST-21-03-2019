@@ -5,15 +5,10 @@
  */
 package br.senai.sc.sistemaGestao.JFrames;
 
-import br.senai.sc.sisloja.dao.ColaboradorDao;
-import br.senai.sc.sisGestao.conexao.ConnectionFactory;
 import br.senai.sc.sisGestao.modelo.ValidarLogin;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -146,20 +141,21 @@ public class LoginJFrame extends javax.swing.JFrame {
 
         String senhaString = "";
         for (int i = 0; i < senha.length; i++) {
-            System.out.println(senha[i]);
-            senhaString = senhaString+senha[i];
-        }
-        
-         if (val.checkLogin(usuario, senhaString, cargo)) {
-            this.dispose();
-            if (cargo.equals("Gestor") || cargo.equals("gestor")) {
-                 GestorJFrame gestor = new GestorJFrame();
-                 gestor.setVisible(true);
-            } else {
-                
-            }
+            senhaString = senhaString + senha[i];
         }
 
+        if (val.checkLogin(usuario, senhaString, cargo)) {
+            this.dispose();
+            if (cargo.equals("Gestor") || cargo.equals("gestor")) {
+                GestorJFrame gestor = new GestorJFrame();
+                gestor.setVisible(true);
+            } /*else if(){
+                //Botar a frame do colaborador
+            }else{
+                JOptionPane.showMessageDialog(null, "erro");
+            }
+            */
+        }
 
     }//GEN-LAST:event_buttonLoginMouseClicked
 
@@ -171,6 +167,7 @@ public class LoginJFrame extends javax.swing.JFrame {
         RegistroJFrame registro = new RegistroJFrame();
         registro.setVisible(true);
         this.dispose();
+
     }//GEN-LAST:event_buttonRegistrarMouseClicked
 
     /**

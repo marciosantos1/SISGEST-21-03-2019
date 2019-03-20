@@ -5,6 +5,8 @@
  */
 package br.senai.sc.sistemaGestao.JFrames;
 
+import br.senai.sc.JPainels.RegistroColaboradorJPanel;
+
 /**
  *
  * @author Aluno
@@ -57,7 +59,7 @@ public class GestorJFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1044, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,15 +68,18 @@ public class GestorJFrame extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonCadastro)
-                .addContainerGap(454, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonCadastroMouseClicked
-      
+        RegistroColaboradorJPanel rc = new RegistroColaboradorJPanel();
         
+        rc.setVisible(true);
+        
+       
     }//GEN-LAST:event_buttonCadastroMouseClicked
 
     /**
