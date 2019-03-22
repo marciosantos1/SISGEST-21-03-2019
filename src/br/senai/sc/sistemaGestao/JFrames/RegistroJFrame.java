@@ -253,7 +253,7 @@ public class RegistroJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cpEmailActionPerformed
 
     private void btVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btVoltarMouseClicked
-        LoginJFrame loginJ = new LoginJFrame();
+        Login loginJ = new Login();
      
         loginJ.setVisible(true);
         this.dispose();
