@@ -6,7 +6,7 @@
 package br.senai.sc.JPainels;
 
 import br.senai.sc.sisGestao.modelo.CadastrarUsuario;
-import br.senai.sc.sisloja.dao.ColaboradorDao;
+import br.senai.sc.sisGestao.dao.ColaboradorDao;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

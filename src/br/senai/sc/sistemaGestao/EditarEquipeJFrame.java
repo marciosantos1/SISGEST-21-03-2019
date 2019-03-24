@@ -6,7 +6,7 @@
 package br.senai.sc.sistemaGestao;
 
 import br.senai.sc.sisGestao.modelo.CadastrarEquipe;
-import br.senai.sc.sisloja.dao.EquipeDao;
+import br.senai.sc.sisGestao.dao.EquipeDao;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

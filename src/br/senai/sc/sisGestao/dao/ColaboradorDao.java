@@ -1,4 +1,4 @@
-package br.senai.sc.sisloja.dao;
+package br.senai.sc.sisGestao.dao;
 
 import br.senai.sc.sisGestao.conexao.ConnectionFactory;
 import br.senai.sc.sisGestao.modelo.CadastrarUsuario;
